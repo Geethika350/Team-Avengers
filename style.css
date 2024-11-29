@@ -1,0 +1,249 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fbeef7; /* Light Pink Background */
+    color: #2f3640;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+header {
+    background-color: #ff6b81; /* Soft Pink */
+    color: white;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Dashboard Section */
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    animation: slideUp 1s ease-out;
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 30%;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+}
+
+.dashboard-card h2 {
+    font-size: 1.6rem;
+    color: #ff5f7f; /* Soft Pink Color */
+}
+
+.dashboard-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+/* Transaction Form Section */
+.transaction-form {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.transaction-form h2 {
+    font-size: 2rem;
+    color: #d84e94; /* Deep Pink */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.input-group input, .input-group select {
+    width: 48%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #f3a2b2; /* Light Pink border */
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #ff6b81; /* Focus border color */
+    outline: none;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #ff5f7f; /* Pink button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #d84e94; /* Darker Pink on Hover */
+}
+
+/* Spending Insights Section */
+.spending-insights {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    animation: slideIn 1s ease-out;
+}
+
+.charts-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+canvas {
+    max-width: 48%;
+    max-height: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+canvas:hover {
+    transform: scale(1.05);
+}
+
+/* Savings Goal Tracker Section */
+.savings-goals {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.savings-goals h2 {
+    font-size: 2rem;
+    color: #d84e94;
+    margin-bottom: 20px;
+}
+
+.savings-goals .input-group {
+    margin-bottom: 25px;
+}
+
+.savings-goals #savingsStatus {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff6b81; /* Soft Pink */
+}
+
+/* Section Titles with Animation */
+section h2 {
+    font-size: 2rem;
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .dashboard-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .charts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    canvas {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
